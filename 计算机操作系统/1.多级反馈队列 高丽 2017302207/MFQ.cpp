@@ -145,7 +145,7 @@ void Init(int levelnum,FBqueue FBQ[] ,queue<process>& allprocess) {
 	int intimeslice;
 	vector<process>vpro;//存储所有输入的进程，这里选择容器是为了方便排序
 	cout << "请输入多级队列的时间片（从低到高）：" << endl;
-	for (int i = levelnum - 1; i >= 0; i--) {
+	for (int i = 0; i < levelnum;i++) {
 		cin >> intimeslice;
 		FBQ[i].timeslice = intimeslice;
 	}
